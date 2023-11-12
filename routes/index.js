@@ -1,6 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
+const messages = [
+  {
+    text: "hi there",
+    user: "Amando",
+    added: new Date()
+  },
+  {
+    text: "hello world",
+    user: "Charles",
+    added: new Date()
+  }
+];
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
