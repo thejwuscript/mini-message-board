@@ -1,5 +1,21 @@
+<!DOCTYPE html>
 <html>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Mini Message Board</title>
+   </head>
    <body>
-      Hello <%= title %>
+      Hi there! Welcome to <%= title %>
+      <ul>
+         <% messages.forEach(message => { %>
+            <li>
+               <div><%= message.text %></div>
+               <div><%= message.user %></div>
+               <div><%- message.added %></div>
+            </li>
+         <% }) %>
+      </ul>
    </body>
 </html>
