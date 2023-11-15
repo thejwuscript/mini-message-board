@@ -1,7 +1,6 @@
 const express = require("express")
 const router = express.Router();
-const indexModule = require("./index")
-const messages = indexModule.messages;
+const { messages } = require("./index")
 
 router.get("/", function (req, res) {
     res.render("form")
